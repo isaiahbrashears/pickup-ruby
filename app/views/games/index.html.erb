@@ -1,0 +1,25 @@
+
+<h1>Listing Games</h1>
+
+<table>
+  <tr>
+    <th>Title</th>
+    <th>address</th>
+    <th></th>
+  </tr>
+
+  <% @games.each do |game| %>
+    <tr>
+      <td><%= game.title %></td>
+      <td><%= game.address %></td>
+      <td><%= link_to 'Show', game_path(game) %></td>
+      <td><%= link_to 'Edit', edit_article_path(article) %></td>
+      <td>
+          <%= link_to 'Destroy', article_path(article),
+              method: :delete,
+              data: { confirm: 'Are you sure?' }
+          %>
+      </td>
+    </tr>
+  <% end %>
+</table>
