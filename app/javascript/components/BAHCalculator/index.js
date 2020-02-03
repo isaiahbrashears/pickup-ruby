@@ -1,10 +1,15 @@
-import React from 'react'
+import React from 'react';
+import BAHCalculatorStore from './stores/BAHCalculatorStore';
+import BAHCalculateForm from './components/BAHCalculateForm';
+import DisplayedBAH from './components/DisplayedBAH';
 
-const BAHCalculator = props => {
-  const mhaBah = JSON.parse(props.mhaBahJson);
+const BAHCalculator = railsProps => {
+  const bahCalculatorStore = new BAHCalculatorStore(railsProps);
   return (
-
-    <p>we should see test here: {console.log(mhaBah.AK400)} </p>
+    <>
+      <BAHCalculateForm store={bahCalculatorStore} />
+      <DisplayedBAH store={bahCalculatorStore} />
+    </>
   );
 };
 
