@@ -19,7 +19,7 @@ class BahCalculatorStore {
       get findBAHWo(){
         if(this.formSubmitted){
           if(this.mhaBAHWo[this.findMHA] != null){
-            return this.mhaBAH[this.findMHA][this.rank]
+            return this.mhaBAHWo[this.findMHA][this.rank]
           }else {
             return 'Zip Not Found'
           }
@@ -30,7 +30,7 @@ class BahCalculatorStore {
       get findBAHW(){
         if(this.formSubmitted){
           if(this.mhaBAHW[this.findMHA] != null){
-            return this.mhaBAH[this.findMHA][this.rank]
+            return this.mhaBAHW[this.findMHA][this.rank]
           }else {
             return 'Zip Not Found'
           }

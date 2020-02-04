@@ -5,7 +5,7 @@ class CalculatorController < ApplicationController
     @mhaBahWoJson = mha_bah_hash('app/assets/textfiles/bahwo20.txt').to_json
     @mhaBahWJson = mha_bah_hash('app/assets/textfiles/bahw20.txt').to_json
     @zipcodeMhaJson = zip_mha_hash("app/assets/textfiles/sorted_zipmha20.txt").to_json
-    @railsProps = {mhaBahWoJson: @mhaBahWoJson, mhaBahWJson: @mhaBahWoJson, zipcodeMha: @zipcodeMhaJson}
+    @railsProps = {mhaBahWoJson: @mhaBahWoJson, mhaBahWJson: @mhaBahWJson, zipcodeMha: @zipcodeMhaJson}
   end
 
   def bah
